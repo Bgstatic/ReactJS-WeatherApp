@@ -1,0 +1,5 @@
+.weather__container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
+}
