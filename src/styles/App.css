@@ -1,0 +1,9 @@
+body {
+  overflow: hidden;
+  /* Hide scrollbars */
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+}
