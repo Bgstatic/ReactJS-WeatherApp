@@ -1,5 +1,89 @@
 .weather__container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-grow: 2;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.the__weather__section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.the__weather__title {
+    display: flex;
+    justify-content: space-around;
+}
+
+.weather__info {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-around;
+    border: 1px solid green;
+    justify-content: space-around;
+}
+
+.weather__degree {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid blue;
+}
+
+.weather__degree h1 {
+    font-size: 100px;
+}
+
+.weather__city h1 {
+    font-size: 50px;
+    font-weight: 1100;
+}
+
+.weather__city sub {
+    font-size: 13px;
+    position: relative;
+    bottom: 25px;
+    text-align: center;
+    font-weight: 1000;
+}
+
+.weather__city {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 1px solid lightcoral;
+    justify-content: center;
+    position: relative;
+    right: 3.5vw;
+}
+
+.weather__logo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.weather__logo {
+    position: relative;
+    right: 6vw;
+}
+
+.weather__logo img {
+    height: 40px;
+}
+
+.weather__logo sub {
+    font-size: 13px;
+    position: relative;
+    top: 20px;
+    text-align: center;
+    font-weight: 1000;
 }
