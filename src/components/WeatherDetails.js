@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/WeatherDetails.css";
 
-function WeatherDetails() {
+function WeatherDetails({ weather }) {
   return (
     <div className="navbar__details__container">
       <div className="navbar__details__title">
@@ -19,7 +19,7 @@ function WeatherDetails() {
         <span></span>
         <span></span>
         <div className="cloudy__value">
-          <h3>86%</h3>
+          <h3>{weather.clouds ? weather?.clouds?.all : null}%</h3>
         </div>
       </div>
       <div className="navbar__details__Humidity">
@@ -29,7 +29,7 @@ function WeatherDetails() {
         <span></span>
         <span></span>
         <div className="humidity__value">
-          <h3>62%</h3>
+          <h3>{weather.main ? weather?.main?.humidity : null}%</h3>
         </div>
       </div>
       <div className="navbar__details__Wind">
@@ -39,7 +39,7 @@ function WeatherDetails() {
         <span></span>
         <span></span>
         <div className="wind__value">
-          <h3>8km/h</h3>
+          <h3>{weather.wind ? weather?.wind?.speed : null}km/h</h3>
         </div>
       </div>
       <div className="navbar__details__Rain">
@@ -49,7 +49,7 @@ function WeatherDetails() {
         <span></span>
         <span></span>
         <div className="rain__value">
-          <h3>8mm</h3>
+          <h3>{weather.rain ? weather?.rain["1h"] : null}mm</h3>
         </div>
       </div>
     </div>
