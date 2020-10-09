@@ -73,11 +73,14 @@
 
 .weather__logo {
     position: relative;
-    right: 6vw;
+    right: 7vw;
+    bottom: 0.2vw;
+    align-items: center;
 }
 
 .weather__logo img {
-    height: 40px;
+    max-width: 50px;
+    max-height: 50px;
 }
 
 .weather__logo sub {
