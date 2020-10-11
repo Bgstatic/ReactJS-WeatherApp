@@ -5,7 +5,7 @@ import Input from "@material-ui/core/Input";
 import SearchIcon from "@material-ui/icons/Search";
 import "../styles/Navbar.css";
 
-function Navbar({ getData }) {
+function Navbar({ getData, defaultData }) {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
 
@@ -17,7 +17,6 @@ function Navbar({ getData }) {
     }
   };
   getData(weather);
-  console.log(weather.weather?.[0].icon);
   return (
     <div className="weather__navbar">
       <div className="weather__input__container">
@@ -32,14 +31,14 @@ function Navbar({ getData }) {
       </div>
       <div className="navbar__cities__container">
         <div className="cities">
-          <h3 onClick={(e) => setQuery(e.target.value)}>Birmingham</h3>
+          <h3>Birmingham</h3>
           <h3>Manchester</h3>
           <h3>New York</h3>
           <h3>California</h3>
         </div>
         <div className="arrange__cities"></div>
       </div>
-      <WeatherDetails weather={weather} />
+      <WeatherDetails weather={weather} defaultData={defaultData} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Weather.css";
 
-function Weather({ data }) {
+function Weather({ data, defaultData }) {
   return (
     <div className="weather__container">
       <div className="the__weather__section">
@@ -19,23 +19,36 @@ function Weather({ data }) {
         <span></span>
         <div className="weather__degree">
           <h1>
-            {data.main ? Math.round(data?.main?.temp) : "08"} <sup>°</sup>
+            {data.current
+              ? data?.current?.temperature
+              : defaultData.current?.temperature}
+            <sup>°</sup>
           </h1>
         </div>
         <div className="weather__city">
-          <h1>{data.main ? data.name : "London"}</h1>
-          <sub>06:09 - Sunday, 6 Oct '19</sub>
+          <h1>
+            {data.location ? data.location?.name : defaultData.location?.name}
+          </h1>
+          <sub>
+            {data.location
+              ? data.location?.localtime
+              : defaultData.location?.localtime}
+          </sub>
         </div>
         <div className="weather__logo">
           <img
             src={
-              data.main
-                ? `https://openweathermap.org/img/wn/${data?.weather?.[0].icon}@2x.png`
-                : "null"
+              data.current
+                ? data.current?.weather_icons[0]
+                : defaultData.current?.weather_icons[0]
             }
             alt="icon"
           />
-          <sub>{data.weather?.[0].description}</sub>
+          <sub>
+            {data.current
+              ? data.current?.weather_descriptions[0]
+              : defaultData.current?.weather_descriptions[0]}
+          </sub>
         </div>
         <span></span>
         <span></span>
