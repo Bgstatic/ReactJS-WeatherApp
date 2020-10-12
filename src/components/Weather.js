@@ -1,7 +1,10 @@
 import React from "react";
 import "../styles/Weather.css";
+import { matchIcons } from "../utilities/matchIcons";
 
 function Weather({ data, defaultData }) {
+  const dataDesc = data.current?.weather_descriptions[0];
+  const defaultDesc = defaultData.current?.weather_descriptions[0];
   return (
     <div className="weather__container">
       <div className="the__weather__section">
@@ -35,20 +38,13 @@ function Weather({ data, defaultData }) {
               : defaultData.location?.localtime}
           </sub>
         </div>
+        {}
         <div className="weather__logo">
           <img
-            src={
-              data.current
-                ? data.current?.weather_icons[0]
-                : defaultData.current?.weather_icons[0]
-            }
+            src={data.current ? matchIcons(dataDesc) : matchIcons(defaultDesc)}
             alt="icon"
           />
-          <sub>
-            {data.current
-              ? data.current?.weather_descriptions[0]
-              : defaultData.current?.weather_descriptions[0]}
-          </sub>
+          <sub>{data.current ? dataDesc : defaultDesc}</sub>
         </div>
         <span></span>
         <span></span>
