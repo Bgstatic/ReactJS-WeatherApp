@@ -12,6 +12,10 @@
     flex-grow: 1;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Black w/opacity/see-through */
 }
 
 .the__weather__title {
@@ -24,8 +28,12 @@
     flex-direction: row;
     flex-grow: 1;
     justify-content: space-around;
-    border: 1px solid green;
     justify-content: space-around;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Black w/opacity/see-through */
+    color: white;
 }
 
 .weather__degree {
@@ -33,16 +41,17 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid blue;
 }
 
 .weather__degree h1 {
     font-size: 100px;
+    color: white;
 }
 
 .weather__city h1 {
     font-size: 50px;
     font-weight: 1100;
+    color: white;
 }
 
 .weather__city sub {
@@ -51,13 +60,13 @@
     bottom: 25px;
     text-align: center;
     font-weight: 1000;
+    color: white;
 }
 
 .weather__city {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    border: 1px solid lightcoral;
     justify-content: center;
     position: relative;
     right: 3.5vw;
@@ -68,7 +77,6 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid red;
 }
 
 .weather__logo {
