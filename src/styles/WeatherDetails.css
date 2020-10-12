@@ -2,7 +2,6 @@
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    border: 1px solid cyan;
 }
 
 .navbar__details__title {
@@ -11,6 +10,7 @@
     flex-grow: 1.5;
     justify-content: space-around;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .navbar__details__cloudy {
@@ -46,9 +46,47 @@
 }
 
 .navbar__details__container h3 {
-    color: #899392;
+    color: white;
 }
 
 .title h3 {
-    color: black;
+    color: white;
+}
+
+@media only screen and (max-width: 1540px) {
+    .navbar__details__title {
+        position: relative;
+        left: 15px;
+    }
+    .navbar__details__cloudy {
+        position: relative;
+        left: 10px;
+    }
+    .navbar__details__Humidity {
+        position: relative;
+        left: 10px;
+    }
+    .navbar__details__Wind {
+        position: relative;
+        left: 10px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .navbar__details__title {
+        position: relative;
+        left: 40px;
+    }
+    .navbar__details__cloudy {
+        position: relative;
+        left: 40px;
+    }
+    .navbar__details__Humidity {
+        position: relative;
+        left: 40px;
+    }
+    .navbar__details__Wind {
+        position: relative;
+        left: 40px;
+    }
 }
