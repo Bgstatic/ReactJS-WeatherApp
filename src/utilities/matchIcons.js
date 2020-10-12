@@ -23,7 +23,10 @@ export const matchIcons = (subText) => {
       backgroundImage = sunny;
     } else if (subText.indexOf("Cloudy") >= 0) {
       backgroundImage = cloudy;
-    } else if (subText.indexOf("Partly cloudy") >= 0) {
+    } else if (
+      subText.indexOf("Partly cloudy") >= 0 ||
+      subText.indexOf("Overcast") >= 0
+    ) {
       backgroundImage = partly_cloudy;
     } else if (subText.indexOf("Rain") >= 0 || subText.indexOf("Shower") >= 0) {
       backgroundImage = rainy;
