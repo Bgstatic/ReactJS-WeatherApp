@@ -58,14 +58,10 @@ function WeatherDetails({ weather, defaultData }) {
         </div>
       </div>
       <div className="navbar__details__Rain">
-        <div className="rain">
-          <h3></h3>
-        </div>
+        <div className="rain"></div>
         <span></span>
         <span></span>
-        <div className="rain__value">
-          <h3></h3>
-        </div>
+        <div className="rain__value"></div>
       </div>
     </div>
   );
