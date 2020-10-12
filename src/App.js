@@ -35,7 +35,6 @@ function App() {
   const backgroundImageLink = image[0]
     ? image[Math.floor(Math.random() * 10)]?.urls?.full
     : defaultImage[Math.floor(Math.random() * 10)]?.urls?.full;
-  console.log(backgroundImageLink);
   return (
     <div
       className="App"
