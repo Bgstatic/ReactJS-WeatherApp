@@ -2,30 +2,31 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     flex-wrap: wrap;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
 }
 
 .weather__input__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
+    opacity: 100;
 }
 
 .navbar__input {
-    position: relative;
-    left: 50px;
-    width: 70%;
+    background-color: rgba(180, 180, 180, 0.2);
+    width: 72%;
 }
 
 ::placeholder {
-    color: #7B8080;
     font-size: 1.5em;
 }
 
 .navbar__searchIcon {
     position: relative;
-    left: 41px;
     padding: 31px;
     background-color: #829F9A;
 }
@@ -42,5 +43,17 @@
     flex-direction: column;
     flex-grow: 0.5;
     justify-content: space-evenly;
-    color: #899392;
+    color: white;
+}
+
+.cities h3 {
+    position: relative;
+    left: 0.8vw;
+}
+
+@media only screen and (min-width: 1600px) {
+    .cities h3 {
+        position: relative;
+        left: 35px;
+    }
 }
