@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "https://api.weatherstack.com/current";
+const URL = "http://api.weatherstack.com/current";
 const API_KEY = "eba5967570e8485f7bb1be336bdf1ed3";
 
 export const fetchWeather = async (query) => {
