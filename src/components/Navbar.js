@@ -4,18 +4,23 @@ import { fetchWeather } from "../services/fetchWeather";
 import Input from "@material-ui/core/Input";
 import SearchIcon from "@material-ui/icons/Search";
 import "../styles/Navbar.css";
+import { fetchPhotos } from "../services/fetchPhotos";
 
-function Navbar({ getData, defaultData }) {
+function Navbar({ getData, getImage, defaultData }) {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
+  const [image, setImage] = useState({});
 
   const search = async (e) => {
     if (e.key === "Enter") {
       const WeatherData = await fetchWeather(query);
+      const ImageLocation = await fetchPhotos(query);
+      setImage(ImageLocation.results);
       setWeather(WeatherData);
       setQuery("");
     }
   };
+  getImage(image);
   getData(weather);
   return (
     <div className="weather__navbar">
