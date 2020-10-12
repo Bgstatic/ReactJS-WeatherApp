@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import WeatherDetails from "./WeatherDetails";
 import { fetchWeather } from "../services/fetchWeather";
 import Input from "@material-ui/core/Input";
@@ -20,8 +20,20 @@ function Navbar({ getData, getImage, defaultData }) {
       setQuery("");
     }
   };
-  getImage(image);
-  getData(weather);
+
+  const clickText = async (query) => {
+    const WeatherData = await fetchWeather(query);
+    const ImageLocation = await fetchPhotos(query);
+    setImage(ImageLocation.results);
+    setWeather(WeatherData);
+    setQuery("");
+  };
+
+  useEffect(() => {
+    getImage(image);
+    getData(weather);
+  }, [getData, getImage, image, weather]);
+
   return (
     <div className="weather__navbar">
       <div className="weather__input__container">
@@ -36,10 +48,10 @@ function Navbar({ getData, getImage, defaultData }) {
       </div>
       <div className="navbar__cities__container">
         <div className="cities">
-          <h3>Birmingham</h3>
-          <h3>Manchester</h3>
-          <h3>New York</h3>
-          <h3>California</h3>
+          <h3 onClick={(e) => clickText(e.target.textContent)}>Istanbul</h3>
+          <h3 onClick={(e) => clickText(e.target.textContent)}>London</h3>
+          <h3 onClick={(e) => clickText(e.target.textContent)}>New York</h3>
+          <h3 onClick={(e) => clickText(e.target.textContent)}>Los Angeles</h3>
         </div>
         <div className="arrange__cities"></div>
       </div>
