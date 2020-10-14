@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/*"
-  to = "http://api.weatherstack.com/current:splat"
+  from = "/weather*"
+  to = "http://api.weatherstack.com/current?access_key=eba5967570e8485f7bb1be336bdf1ed3:splat"
   status = 200
   force = true
