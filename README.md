@@ -14,7 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Restrictions
 
- * Due to the free version of the WeatherStack-API I have used the http based api which has not a security certificate, I cannot deploy the app properly. I am working on deploy from other hosting firms lately. As soon as I deploy the app, I will share the link of the project. 
+ * Due to the free version of the WeatherStack-API I have used the http based api which has not a security certificate, I cannot deploy the app properly. But you can alsa clone this repo and work on your machine. I am working on deploy from other hosting firms lately. As soon as I deploy the app, I will share the link of the project. 
  
  * There is a api call limit on WeatherStack api and Unplash api. For **WeatherStack Api -> (1000 call/month), Unplash Api -> (50 call/hour)**
  
