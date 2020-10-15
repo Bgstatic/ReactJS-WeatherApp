@@ -3,3 +3,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # ReactJS-WeatherApp
 
 #### A mini basic weather app which displays current weather. Made with ReactJS | React-Hooks | WeatherStack-API | Unplash-API | POSTMAN
+
+ ## About the App
