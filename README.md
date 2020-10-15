@@ -18,7 +18,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  
  * There is a api call limit on WeatherStack api and Unplash api. For **WeatherStack Api -> (1000 call/month), Unplash Api -> (50 call/hour)**
  
+ ---
+ 
  ## Project ScreenShot(s)
  
  ![Istanbul](https://github.com/Bgstatic/ReactJS-WeatherApp/blob/master/readme/Istanbul.png)
  
+ ---
+ 
+ ![New_York](https://github.com/Bgstatic/ReactJS-WeatherApp/blob/master/readme/New_York.png)
+ 
+ ---
+ 
+
